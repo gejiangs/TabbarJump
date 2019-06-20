@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstChildViewController.h
 //  TabbarJump
 //
 //  Created by gejiangs on 2019/6/20.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, assign)   BOOL gotoDetail;
+@interface FirstChildViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

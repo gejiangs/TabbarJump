@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "SecondChildViewController.h"
 
 @interface SecondViewController ()
 
@@ -16,7 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"第二页";
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (self.gotoDetail == NO) {
+        return;
+    }
+    
+    SecondChildViewController *vc = [[SecondChildViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    self.gotoDetail = NO;
 }
 
 

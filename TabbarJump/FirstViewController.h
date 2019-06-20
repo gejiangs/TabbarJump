@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger) {
+    GoActionNone = 0,
+    GoActionSecond = 1,
+    GoActionSecondDetail = 2
+}GoAction;
+
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, assign)   GoAction action;
 
 @end
 
